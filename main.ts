@@ -1,0 +1,45 @@
+let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
+basic.showString("Juan")
+basic.forever(function () {
+    strip.showColor(neopixel.rgb(randint(0, 255), randint(0, 255), randint(0, 255)))
+    basic.pause(1000)
+})
+basic.forever(function () {
+    basic.showLeds(`
+        # # . # #
+        # # . # #
+        . . . . .
+        # # # # #
+        . . . . .
+        `)
+    music.rest(music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Breve))
+    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Double))
+    music.playTone(262, music.beat(BeatFraction.Whole))
+    music.playTone(262, music.beat(BeatFraction.Breve))
+})
