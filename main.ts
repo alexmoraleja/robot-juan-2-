@@ -1,21 +1,21 @@
 input.onButtonPressed(Button.A, function () {
-    for (let index = 0; index < 25; index++) {
-        strip.showColor(neopixel.colors(NeoPixelColors.Red))
-        music.playTone(988, music.beat(BeatFraction.Double))
-        strip.showColor(neopixel.colors(NeoPixelColors.Blue))
-        music.playTone(698, music.beat(BeatFraction.Double))
-    }
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 255)
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 255)
+    basic.pause(2000)
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 0)
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 255)
+    basic.pause(2000)
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 255)
+    basic.pause(2000)
+    maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, 255)
+    maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, 255)
+    basic.pause(2000)
 })
 input.onButtonPressed(Button.B, function () {
-    for (let index = 0; index < 25; index++) {
-        strip.showColor(neopixel.colors(NeoPixelColors.Red))
-        music.playTone(988, music.beat(BeatFraction.Half))
-        strip.showColor(neopixel.colors(NeoPixelColors.Blue))
-        music.playTone(698, music.beat(BeatFraction.Half))
-    }
+	
 })
-let strip: neopixel.Strip = null
-strip = neopixel.create(DigitalPin.P15, 25, NeoPixelMode.RGB)
+let strip = neopixel.create(DigitalPin.P15, 25, NeoPixelMode.RGB)
 basic.showString("Juan")
 basic.forever(function () {
     basic.showLeds(`
