@@ -43,11 +43,5 @@ input.onButtonPressed(Button.B, function () {
 let strip = neopixel.create(DigitalPin.P15, 25, NeoPixelMode.RGB)
 basic.showString("Juan")
 basic.forever(function () {
-    basic.showLeds(`
-        # # . # #
-        # # . # #
-        . . . . .
-        # # # # #
-        . . . . .
-        `)
+	
 })
